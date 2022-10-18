@@ -19,12 +19,12 @@ $gender = $_POST['gender'];
 $email = $_POST['email'];
 $number = $_POST['number'];
 $message = $_POST['message'];
-$headers = 'From:'. "noreply@vcetinfo.com" . "rn"; // Sender's Email
-$headers .= 'Cc:'. "noreply@vcetinfo.com". "rn"; // Carbon copy to Sender
+$headers = 'From:'. $email2 . "rn"; // Sender's Email
+$headers .= 'Cc:'. $email2. "rn"; // Carbon copy to Sender
 // Message lines should not exceed 70 characters (PHP rule), so wrap it
 $message = wordwrap($message, 70);
 // Send Mail By PHP Mail Function
-mail("keerthig12345@gmail.com", $firstName,$gender,$email,$number,$message);
+mail("keerthi.g12345@gmail.com", $firstName,$gender,$email,$number,$message);
 echo "Your mail has been sent successfuly ! Thank you for your feedback";
 }
 }
@@ -34,7 +34,7 @@ echo "Your mail has been sent successfuly ! Thank you for your feedback";
 
 
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -45,4 +45,4 @@ echo "Your mail has been sent successfuly ! Thank you for your feedback";
 <body>
 	<h1>hello</h1>
 </body>
-</html> -->
+</html>
