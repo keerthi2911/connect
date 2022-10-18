@@ -19,8 +19,8 @@ $gender = $_POST['gender'];
 $email = $_POST['email'];
 $number = $_POST['number'];
 $message = $_POST['message'];
-$headers = 'From:'. $email2 . "rn"; // Sender's Email
-$headers .= 'Cc:'. $email2 . "rn"; // Carbon copy to Sender
+$headers = 'From:'. "noreply@vcetinfo.com" . "rn"; // Sender's Email
+$headers .= 'Cc:'. "noreply@vcetinfo.com". "rn"; // Carbon copy to Sender
 // Message lines should not exceed 70 characters (PHP rule), so wrap it
 $message = wordwrap($message, 70);
 // Send Mail By PHP Mail Function
