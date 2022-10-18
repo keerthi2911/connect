@@ -6785,7 +6785,7 @@ button.close {
             <h1>Feedback Form</h1>
           </div>
           <div class="panel-body">
-            <form action="connect.php" method="post">
+            <form action="mail.php" method="post">
               <div class="form-group">
                 <label for="firstName" style="font-size: 16.5px;">Enter Your Name</label>
                 <input  style="font-size: 13px;"
