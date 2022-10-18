@@ -1,13 +1,13 @@
 <?php
 //get data from form  
 $firstName = $_POST['firstName'];
-	$gender = $_POST['gender'];
+// 	$gender = $_POST['gender'];
 	$email = $_POST['email'];
 	$number = $_POST['number'];
 	$message = $_POST['message'];
 $to = "keerthi.g12345@gmail.com";
 $subject = "Mail From website";
-$txt ="FirstName = ". $firstName . "\r\n  Gender = " . $gender . "\r\n Email =" . $email . "\r\n Number =" . $number . "\r\n Message =" . $message;
+$txt ="FirstName = ". $firstName . "\r\n Email =" . $email . "\r\n Number =" . $number . "\r\n Message =" . $message;
 $headers = "From: keerthi2911@gmail.com" . "\r\n" .
 "CC: somebodyelse@example.com";
 if($email!=NULL){
