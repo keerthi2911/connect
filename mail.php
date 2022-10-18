@@ -5,13 +5,11 @@ $firstName = $_POST['firstName'];
 	$email = $_POST['email'];
 	$number = $_POST['number'];
 	$message = $_POST['message'];
-$to = "keerthi.g12345@gmail.com";
-$subject = "Mail From codeconia";
-$txt ="FirstName = ". $firstName .  "\r\n Gender =" . $gender . "\r\n Email =" . $email . "\r\n Number =" . $number . "\r\n Message =" . $message;
-$headers = "From: noreply@codeconia.com" . "\r\n" .
-"CC: somebodyelse@example.com";
-if($email!=NULL){
-    mail($to,$subject,$txt,$headers);
-}
+
+$mailheader = "From:".$firstName."<".$email.">\r\n";
+
+$recipient = "keerthi.g12345@gmail.com";
+
+mail($recipient, $gender, $number,$message,$mailheader) or die("Error!");
 echo '<script>alert("Thank You..! Your Feedback is Valuable to Us"); location.replace(document.referrer);</script>';
 ?>
