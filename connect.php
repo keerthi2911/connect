@@ -1,34 +1,19 @@
 <?php
-if(isset($_POST["submit"])){
-// Checking For Blank Fields..
-if($_POST["firstName"]==""||$_POST["gender"]==""||$_POST["email"]==""||$_POST["number"]==""||$_POST["message"]==""){
-echo "Fill All Fields..";
-}else{
-// Check if the "Sender's Email" input field is filled out
-$email=$_POST['email'];
-// Sanitize E-mail Address
-$email =filter_var($email, FILTER_SANITIZE_EMAIL);
-// Validate E-mail Address
-$email= filter_var($email, FILTER_VALIDATE_EMAIL);
-if (!$email){
-echo "Invalid Sender's Email";
-}
-else{
+//get data from form  
 $firstName = $_POST['firstName'];
-$gender = $_POST['gender'];
-$email = $_POST['email'];
-$number = $_POST['number'];
-$message = $_POST['message'];
-$headers = 'From:'. $email2 . "rn"; // Sender's Email
-$headers .= 'Cc:'. $email2. "rn"; // Carbon copy to Sender
-// Message lines should not exceed 70 characters (PHP rule), so wrap it
-$message = wordwrap($message, 70);
-// Send Mail By PHP Mail Function
-mail("keerthi.g12345@gmail.com", $firstName,$gender,$email,$number,$message);
-echo "Your mail has been sent successfuly ! Thank you for your feedback";
+	$gender = $_POST['gender'];
+	$email = $_POST['email'];
+	$number = $_POST['number'];
+	$message = $_POST['message'];
+$to = "keerthi.g12345@gmail.com";
+$subject = "Mail From codeconia";
+$txt ="FirstName = ". $firstName .  "\r\n Gender =" . $gender . "\r\n Email =" . $email . "\r\n Number =" . $number . "\r\n Message =" . $message;
+$headers = "From: noreply@codeconia.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+if($email!=NULL){
+    mail($to,$subject,$txt,$headers);
 }
-}
-}
+echo '<script>alert("Thank You..! Your Feedback is Valuable to Us"); location.replace(document.referrer);</script>';
 ?>
 
 
