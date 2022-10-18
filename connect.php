@@ -10,9 +10,9 @@ $subject = "Mail From codeconia";
 $txt ="FirstName = ". $firstName .  "\r\n Gender =" . $gender . "\r\n Email =" . $email . "\r\n Number =" . $number . "\r\n Message =" . $message;
 $headers = "From: noreply@codeconia.com" . "\r\n" .
 "CC: somebodyelse@example.com";
-if($email!=NULL){
+// if($email!=NULL){
     mail($to,$subject,$txt,$headers);
-}
+// }
 echo '<script>alert("Thank You..! Your Feedback is Valuable to Us"); location.replace(document.referrer);</script>';
 ?>
 
