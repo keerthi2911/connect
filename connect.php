@@ -34,7 +34,7 @@ echo "Your mail has been sent successfuly ! Thank you for your feedback";
 
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -45,4 +45,4 @@ echo "Your mail has been sent successfuly ! Thank you for your feedback";
 <body>
 	<h1>hello</h1>
 </body>
-</html>
+</html> -->
