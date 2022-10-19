@@ -6912,7 +6912,7 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('Thank you for your feedback!');
+      echo '<script>alert("Thank You..! Your Feedback is Valuable to Us"); location.replace(document.referrer);</script>';
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
